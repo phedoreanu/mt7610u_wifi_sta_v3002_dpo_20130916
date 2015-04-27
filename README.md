@@ -13,7 +13,11 @@ It's using the official [Mediatek](http://www.mediatek.com/en/downloads/mt7601u-
 
 to fix compilation issues.
 
-Modified usb wifi driver for TP_link TL-WDN5200 on Linux. 
+Use ALARM `dkms-mt7610`.
+
+The sources are from the fork:
+
+Support for TP_link TL-WDN5200 on Linux. 
 1. modified:   common/rtusb_dev_id.c 
  * add product id for TL-WDN5200
 1. modified:   include/os/rt_linux.h 
