@@ -1,4 +1,18 @@
 # mt7610u_wifi_sta_v3002_dpo_20130916
+
+I've recently bought a Raspberry Pi 2 and attached a `MT7610U`/`AC600` [5Ghz nano USB dongle](http://www.amazon.co.uk/dp/B00VHB0EW0).
+
+This dkms-module supports these chipsets:
+* `mt7650u`
+* `mt7630u`
+* `mt7610u`
+
+It's using the official [Mediatek](http://www.mediatek.com/en/downloads/mt7601u-usb/) driver along with two other patches:
+* `kuid_t-kgid_t.patch`
+* `__DATE__ & __TIME__macro-warning.patch`
+
+to fix compilation issues.
+
 Modified usb wifi driver for TP_link TL-WDN5200 on Linux. 
 1. modified:   common/rtusb_dev_id.c 
  * add product id for TL-WDN5200
@@ -13,7 +27,6 @@ Modified usb wifi driver for TP_link TL-WDN5200 on Linux.
 ```
 $ make
 $ make install
-$ cp RT2870STA.dat  /etc/Wireless/RT2870STA/RT2870STA.dat
 $ reboot
 ```
 refer to： http://hprath.com/2014/06/cisco-linksys-ae6000-ac580-media-tek-mt7610u-mt7630u-mt7650u-linux-x64-driver-patch/
